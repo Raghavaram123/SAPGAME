@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Basis Learning Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <h2>SAP Logon Pad</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Log In</button>
+        </form>
+    </div>
+
+    <!-- Main Menu (After Login) -->
+    <div id="main-menu" class="hidden">
+        <h2>Select a System</h2>
+        <ul>
+            <li><button class="system-button" data-system="User Administration">User Administration</button></li>
+            <li><button class="system-button" data-system="Transport Management">Transport Management</button></li>
+            <li><button class="system-button" data-system="System Architecture">System Architecture</button></li>
+        </ul>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+        <h2>Question: <span id="question-text"></span></h2>
+        <ul id="options-list"></ul>
+        <button id="next-question" class="hidden">Next Question</button>
+        <p id="score">Score: 0</p>
+    </div>
+
+    <!-- Progress Screen -->
+    <div id="progress-screen" class="hidden">
+        <h2>Progress</h2>
+        <progress id="progress-bar" value="0" max="100"></progress>
+        <p id="final-score">Final Score: 0%</p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
